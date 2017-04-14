@@ -1586,6 +1586,63 @@ colonial_government = {
 	fixed_rank = 1
 }
 
+#Swiss Cantons
+canton = {
+	monarchy = no
+	
+	color = { 200 150 80 }
+	
+	unique_government = yes
+
+	valid_for_new_country = yes
+	allow_convert = no
+	
+	maintain_dynasty = yes
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	rank = {
+		1 = {
+			land_morale = 0.10
+			infantry_power = 0.10	
+		}
+	}
+	fixed_rank = 1
+}
+
+#Switzerland itself before unification.
+dominant_canton = {
+	monarchy = no
+
+	color = { 240 120 5 }
+	
+	unique_government = yes
+	
+	valid_for_new_country = no
+	allow_convert = yes
+	
+	maintain_dynasty = no
+	
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+
+	
+	max_states = 2
+	
+	rank = {
+		2 = {
+			diplomats = 1
+			envoy_travel_time = -0.25
+		}
+	}
+	fixed_rank = 2
+}
+
+
 peasants_republic = {
 	republic = yes
 	
