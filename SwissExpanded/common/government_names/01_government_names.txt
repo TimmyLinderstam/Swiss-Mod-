@@ -244,6 +244,24 @@ gov_daimyo = {
 	}
 }
 
+gov_swiss_city_canton = {
+	rank = {
+		1 = DAIMYO
+	}
+	
+	ruler_male = {
+		1 = LORD
+	}
+	
+	ruler_female = {
+		1 = LADY
+	}
+	
+	trigger = {
+		government = swiss_city_canton
+	}
+}
+
 gov_indep_daimyo = {
 	rank = {
 		1 = INDEP_DAIMYO

@@ -1587,7 +1587,7 @@ colonial_government = {
 }
 
 #Swiss Cantons
-canton = {
+swiss_country_canton = {
 	monarchy = no
 	
 	color = { 200 150 80 }
@@ -1597,7 +1597,62 @@ canton = {
 	valid_for_new_country = yes
 	allow_convert = no
 	
-	maintain_dynasty = yes
+	republican_name = yes
+	royal_marriage = no
+	
+	maintain_dynasty = no
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	rank = {
+		1 = {
+			land_morale = 0.10
+			infantry_power = 0.10	
+		}
+	}
+	fixed_rank = 1
+}
+
+swiss_city_canton = {
+	monarchy = no
+	
+	color = { 200 170 80 }
+	
+	unique_government = yes
+
+	valid_for_new_country = yes
+	allow_convert = no
+	
+	maintain_dynasty = no
+
+	republican_name = yes
+	royal_marriage = no
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	rank = {
+		1 = {
+			land_morale = 0.10
+			infantry_power = 0.10	
+		}
+	}
+	fixed_rank = 1
+}
+
+swiss_church_canton = {
+	monarchy = no
+	
+	color = { 200 160 80 }
+	
+	unique_government = yes
+
+
+	valid_for_new_country = yes
+	allow_convert = no
+	
+	maintain_dynasty = no
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -1624,6 +1679,9 @@ dominant_canton = {
 	
 	maintain_dynasty = no
 	
+	republican_name = yes
+	royal_marriage = no
+
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
 	
