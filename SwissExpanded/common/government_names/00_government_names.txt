@@ -2471,6 +2471,30 @@ german_republic = {
 	}
 }
 
+Swiss_city_canton = {
+	rank = {
+		1 = CANTON
+		2 = GRAND_CANTON
+		3 = GRAND_CITY_CANTON
+	}
+
+	ruler_male = {
+		1 = SYNDIC
+		2 = GRAND_SYNDIC
+		3 = PRESIDENT
+	}
+
+	ruler_female = {
+		1 = SYNDIC_fem
+		2 = GRAND_SYNDIC_fem
+		3 = PRESIDENT_fem
+	}
+
+	trigger = {
+		government = canton
+	}
+}
+
 italian_republic = {
 	rank = {
 		1 = REPUBLIC
