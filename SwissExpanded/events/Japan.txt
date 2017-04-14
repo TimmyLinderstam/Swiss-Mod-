@@ -1,0 +1,103 @@
+########################################
+# Japan Events                         #
+########################################
+
+namespace = japan
+
+# The DYNASTYNAME shogunate has fallen!
+province_event = {
+	id = japan.1
+	title = "japan.EVTNAME1"
+	desc = "japan.EVTDESC1"
+	picture = COURT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = {
+			FROM = {
+				government = shogunate
+			}
+		}
+		desc = japan.EVTDESC1
+	}
+	
+	desc = {
+		trigger = {
+			FROM = {
+				NOT = { government = shogunate }
+			}
+		}
+		desc = japan.1.db
+	}
+	
+	trigger = {
+		# OBS! These checks are also hard coded in WouldBecomeShogunIfTaking() for AI and interface reasons. Change code too if this trigger changes.
+		province_id = 1020
+		owner = {
+			OR = {
+				government = daimyo
+				government = indep_daimyo
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			
+			owner = {
+				change_government = shogunate
+				save_event_target_as = new_shogunate
+			}
+		}
+	}
+	
+	option = {
+		name = "japan.EVTOPTA1"
+		custom_tooltip = claiming_the_shogunate_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = FROM
+					FROM = { government = shogunate }
+				}
+				FROM = {
+					free_vassal = PREV
+				}
+				FROM = {
+					every_subject_country = {
+						limit = {
+							OR = {
+								government = daimyo
+								government = indep_daimyo
+							}
+						}
+						event_target:new_shogunate = {
+							vassalize = PREV
+						}
+					}
+					change_government = indep_daimyo
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = FROM }
+				}
+				every_country = {
+					limit = {
+						government = daimyo
+					}
+					event_target:new_shogunate = {
+						vassalize = PREV
+					}
+				}
+			}
+		}
+		owner = {
+			set_capital = 1020
+			add_core = 1020
+		#	swap_free_idea_group = yes		#keep progress
+		}
+	}
+}

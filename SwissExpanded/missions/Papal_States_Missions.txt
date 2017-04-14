@@ -1,0 +1,247 @@
+conquer_ferrara = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = PAP
+		is_free_or_tributary_trigger = yes
+		113 = {	# Ferrara
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			owner = {
+				is_papal_controller = no
+				NOT = { alliance_with = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject_other_than_tributary_trigger = yes
+			113 = {
+				owner = { is_papal_controller = yes }
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+	success = {
+		owns = 113
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			adm = 4
+		}
+	}
+	immediate = {
+		add_claim = 113
+	}
+	abort_effect = {
+		113 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		113 = {
+			add_province_modifier = {
+				name = "faster_integration"
+				duration = 3650
+			}
+		}
+	}
+}
+
+
+conquer_ancona = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = PAP
+		is_free_or_tributary_trigger = yes
+		119 = { # Ancona
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = PAP }
+			owner = {
+				is_papal_controller = no
+				NOT = { alliance_with = ROOT }
+				NOT = { overlord_of = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject_other_than_tributary_trigger = yes
+			119 = {
+				owner = { is_papal_controller = yes }
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+	success = {
+		owns = 119
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			adm = 4
+		}
+	}
+	immediate = {
+		add_claim = 119
+	}
+	abort_effect = {
+		119 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		119 = {
+			add_province_modifier = {
+				name = "faster_integration"
+				duration = 3650
+			}
+		}
+	}
+}
+
+
+annex_avignon = {
+	
+	type = country
+
+	category = MIL
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = PAP
+		is_free_or_tributary_trigger = yes
+		AVI = {
+			owns = 202		# Avignon
+			religion_group = ROOT
+			is_papal_controller = no
+			NOT = { alliance_with = ROOT }
+			NOT = { overlord_of = ROOT }
+			NOT = { is_subject_of = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			is_subject_other_than_tributary_trigger = yes
+			AVI = {
+				OR = {
+					NOT = { religion_group = ROOT }
+					is_papal_controller = yes
+				}
+			}
+		}
+	}
+	success = {
+		owns = 202
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			adm = 4
+		}
+	}
+	immediate = {
+		add_claim = 202
+	}
+	abort_effect = {
+		202 = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		202 = {
+			add_province_modifier = {
+				name = "faster_integration"
+				duration = 3650
+			}
+		}
+	}
+}
+
+
+catholic_italy = {
+
+	type = country
+
+	category = ADM
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = PAP
+		NOT = { has_country_flag = catholic_italy_done }
+		is_free_or_tributary_trigger = yes
+		is_at_war = no
+		italy_region = { NOT = { religion = catholic } }
+	}
+	abort = {
+		is_subject_other_than_tributary_trigger = yes
+	}
+	success = {
+		NOT = { italy_region = { NOT = { religion = catholic } } }
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 10
+			dip = 4
+		}
+	}
+	effect = {
+		set_country_flag = catholic_italy_done
+		add_country_modifier = {
+			name = "catholic_italy_modifier"
+			duration = 3650
+		}
+	}
+}
