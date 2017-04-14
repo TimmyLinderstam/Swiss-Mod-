@@ -2473,7 +2473,7 @@ german_republic = {
 
 swiss_city_canton = {
 	rank = {
-		1 = CANTON
+		1 = CITY_CANTON
 		2 = GRAND_CANTON
 		3 = GRAND_CITY_CANTON
 	}
@@ -2497,9 +2497,9 @@ swiss_city_canton = {
 
 swiss_church_canton = {
 	rank = {
-		1 = CANTON
-		2 = GRAND_CANTON
-		3 = GRAND_CHURCH_CANTON
+		1 = CHURCH_CANTON
+		2 = GRAND_CHURCH_CANTON
+		3 = GREAT_CHURCH_CANTON
 	}
 
 	ruler_male = {
@@ -2521,7 +2521,7 @@ swiss_church_canton = {
 
 swiss_country_canton = {
 	rank = {
-		1 = CANTON
+		1 = RURAL_CANTON
 		2 = GRAND_CANTON
 		3 = GRAND_RURAL_CANTON
 	}

@@ -246,15 +246,15 @@ gov_daimyo = {
 
 gov_swiss_city_canton = {
 	rank = {
-		1 = DAIMYO
+		1 = mayor
 	}
 	
 	ruler_male = {
-		1 = LORD
+		1 = mayor
 	}
 	
 	ruler_female = {
-		1 = LADY
+		1 = mayor
 	}
 	
 	trigger = {

@@ -1588,8 +1588,6 @@ colonial_government = {
 
 #Swiss Cantons
 swiss_country_canton = {
-	monarchy = no
-	
 	color = { 200 150 80 }
 	
 	unique_government = yes
@@ -1597,11 +1595,19 @@ swiss_country_canton = {
 	valid_for_new_country = yes
 	allow_convert = no
 	
+	republic = yes
+
 	republican_name = yes
+
+	duration = 5
+
 	royal_marriage = no
 	
-	maintain_dynasty = no
-	
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 2
+
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
@@ -1614,9 +1620,7 @@ swiss_country_canton = {
 	fixed_rank = 1
 }
 
-swiss_city_canton = {
-	monarchy = no
-	
+swiss_city_canton = {	
 	color = { 200 170 80 }
 	
 	unique_government = yes
@@ -1624,11 +1628,12 @@ swiss_city_canton = {
 	valid_for_new_country = yes
 	allow_convert = no
 	
-	maintain_dynasty = no
+	republic = yes
+	
+	duration = 4
 
 	republican_name = yes
-	royal_marriage = no
-	
+
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
@@ -1641,21 +1646,21 @@ swiss_city_canton = {
 	fixed_rank = 1
 }
 
-swiss_church_canton = {
-	monarchy = no
-	
+swiss_church_canton = {	
 	color = { 200 160 80 }
 	
 	unique_government = yes
 
+	religions = yes
 
 	valid_for_new_country = yes
 	allow_convert = no
 	
-	maintain_dynasty = no
-	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+	has_devotion = yes
+	rulers_can_be_generals = no
 	
 	rank = {
 		1 = {
@@ -1679,8 +1684,8 @@ dominant_canton = {
 	
 	maintain_dynasty = no
 	
-	republican_name = yes
-	royal_marriage = no
+	republic = yes	
+	
 
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
