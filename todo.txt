@@ -1,0 +1,17 @@
+-Add cantons
+Zurich (Done)
+Uri
+Schwyz
+Unterwalden
+Geneva
+Lucerne
+Basel
+Basel-landschaft
+etc
+-Add provinces
+
+-Add events
+
+-Add missions
+
+-Add catastrophes
