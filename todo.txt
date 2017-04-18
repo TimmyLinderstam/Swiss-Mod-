@@ -1,3 +1,6 @@
+-Add canton-state relation system
+(Edited daimyo system for Japan)
+
 -Add cantons
 Zurich (Done)
 Uri
@@ -9,6 +12,7 @@ Basel
 Basel-landschaft
 etc
 -Add provinces
+
 
 -Add events
 
