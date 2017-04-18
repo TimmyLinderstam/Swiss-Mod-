@@ -1,0 +1,17 @@
+government = swiss_city_canton
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = swiss
+capital = 1869 # Zurich
+
+
+1399.1.1 = {
+	monarch = {
+		name = "Die Tagsatzung"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

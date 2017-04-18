@@ -171,6 +171,10 @@ VER = "countries/Verden.txt"
 NSA = "countries/Nassau.txt"
 RVA = "countries/Ravensburg.txt"
 DTT = "countries/Dithmarschen.txt"
+
+#Switzerland
+ZUR = "countries/Zurich.txt"
+
 	
 #Spain
 ARA	= "countries/Aragon.txt"
