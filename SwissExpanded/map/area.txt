@@ -1,4 +1,4 @@
-# A province can only belong to one area!
+﻿# A province can only belong to one area!
 
 #Sea Areas:
 #No restriction on size.
@@ -848,7 +848,7 @@ carinthia_area = { #3
 }
 
 switzerland_area = { #4
-	166 1869 1870 1873
+	166 1869 1870 1873 4235
 }
 
 romandie_area = { #3
